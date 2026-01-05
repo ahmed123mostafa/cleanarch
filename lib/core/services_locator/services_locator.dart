@@ -5,6 +5,7 @@ import 'package:cleanarch/core/helpers/sync_manager.dart';
 import 'package:cleanarch/core/http/api_concumer.dart';
 import 'package:cleanarch/core/http/end_point.dart';
 import 'package:cleanarch/core/local/hive_service_impl.dart';
+import 'package:cleanarch/core/services_locator/firebase_auth/fire_base_auth.dart';
 import 'package:cleanarch/core/services_locator/hive_services_locator/hive_services_locator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -59,6 +60,7 @@ abstract interface class DI {
       () => ConnectivityService.instance,
     );
    // await AuthServicesLocator.init(getIt: getIt);
+   await FireBaseAuth.init(getIt: getIt);
    
   }
 }
