@@ -1,6 +1,12 @@
+import 'package:cleanarch/feature/auth/presentation/screens/login_screens.dart';
+import 'package:cleanarch/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(const MyApp());
 }
 
@@ -11,22 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          centerTitle: true,
-          title: Text("Flutter Demo", style: TextStyle(color: Colors.white)),
-        ),
-        body: Center(
-          child: Text(
-            'Hello, Flutter!',
-            style: TextStyle(fontSize: 24, color: Colors.white),
-          ),
-        ),
-      ),
+      title: 'Firebase broject ',
+      home: LoginScreen(),
     );
   }
 }

@@ -1,5 +1,5 @@
 
-import 'package:cleanarch/feature/moves/data/models/user_model.dart';
+import 'package:cleanarch/feature/auth/data/models/user_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 part 'token_cash_interface.dart';
 part 'user_cash_interface.dart';
@@ -11,7 +11,7 @@ class HiveServiceImpl implements IUserCache, ITokenCache {
   static Box<String>? _tokenBox;
   static const String currentUserKey = 'current_user';
   static const String accessTokenKey = 'access_token';
-  static const String _profileBoxName = 'profile';
+ // static const String _profileBoxName = 'profile';
   //static Box<GetMyProfileModel>? _profileKey;
 
   HiveServiceImpl._();
