@@ -60,7 +60,7 @@ abstract interface class DI {
       () => ConnectivityService.instance,
     );
    // await AuthServicesLocator.init(getIt: getIt);
-   await FireBaseAuth.init(getIt: getIt);
+   await FireBaseeAuth.init(getIt: getIt);
    
   }
 }

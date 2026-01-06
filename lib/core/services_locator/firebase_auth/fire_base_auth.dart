@@ -5,7 +5,7 @@ import 'package:get_it/get_it.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 
-class FireBaseAuth {
+class FireBaseeAuth {
   static Future<void> init({required GetIt getIt}) async {
     // سجل FirebaseAuth نفسه
     getIt.registerLazySingleton<FirebaseAuth>(() => FirebaseAuth.instance);
